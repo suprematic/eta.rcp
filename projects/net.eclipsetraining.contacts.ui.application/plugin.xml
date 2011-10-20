@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+    <extension id="application" point="org.eclipse.core.runtime.applications">
+        <application
+              icon="icons/contact_16.png">
+            <run
+                class="net.eclipsetraining.contacts.ui.application.internal.application.Application">
+            </run>
+        </application>
+    </extension>
+    <extension point="org.eclipse.ui.perspectives">
+        <perspective
+              class="net.eclipsetraining.contacts.ui.application.internal.application.Perspective"
+              icon="icons/contact_16.png"
+              id="net.eclipsetraining.contacts.ui.application.perspective"
+              name="Default Perspective">
+        </perspective>
+    </extension>
+</plugin>
