@@ -50,5 +50,51 @@
          </view>
       </perspectiveExtension>
    </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="net.eclipsetraining.contacts.ui.views.command.sendEmail"
+            name="Send Email">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="toolbar:net.eclipsetraining.contacts.ui.view.list">
+         <command
+               commandId="org.eclipse.ui.file.refresh"
+               style="push">
+         </command>
+      </menuContribution>
+      <menuContribution
+            locationURI="popup:net.eclipsetraining.contacts.ui.view.list">
+         <command
+               commandId="net.eclipsetraining.contacts.ui.views.command.sendEmail"
+               style="push">
+         </command>
+         <separator
+               name="net.eclipsetraining.contacts.ui.views.separator">
+         </separator>
+         <command
+               commandId="org.eclipse.ui.edit.delete"
+               style="push">
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="net.eclipsetraining.contacts.ui.views.list.SendEmailHandler"
+            commandId="net.eclipsetraining.contacts.ui.views.command.sendEmail">
+      </handler>
+      <handler
+            class="net.eclipsetraining.contacts.ui.views.list.DeleteContactHandler"
+            commandId="org.eclipse.ui.edit.delete">
+      </handler>
+      <handler
+            class="net.eclipsetraining.contacts.ui.views.list.RefreshContactsHandler"
+            commandId="org.eclipse.ui.file.refresh">
+      </handler>
+   </extension>
 
 </plugin>

@@ -3,6 +3,7 @@ package net.eclipsetraining.contacts.ui.views.list;
 import net.eclipsetraining.contacts.core.Contact;
 import net.eclipsetraining.contacts.core.ContactsRepositoryFactory;
 
+import org.eclipse.jface.action.MenuManager;
 import org.eclipse.jface.layout.TableColumnLayout;
 import org.eclipse.jface.viewers.ArrayContentProvider;
 import org.eclipse.jface.viewers.ColumnLabelProvider;
@@ -11,6 +12,7 @@ import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.TableViewerColumn;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.ui.part.ViewPart;
@@ -67,8 +69,19 @@ public class ContactListViewPart extends ViewPart {
 
 		getSite().setSelectionProvider(contactsViewer);
 
+		createContextMenu();
+
 		// Finally set input
 		refreshContacts();
+
+	}
+
+	private void createContextMenu() {
+		MenuManager mgr = new MenuManager();
+		Menu menu = mgr.createContextMenu(contactsViewer.getControl());
+		contactsViewer.getControl().setMenu(menu);
+
+		getViewSite().registerContextMenu("net.eclipsetraining.contacts.ui.view.list", mgr, contactsViewer);
 
 	}
 
