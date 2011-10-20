@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:net.eclipsetraining.examples.menu">
+         <menu
+               label="Dialogs">
+            <command
+                  commandId="net.eclipsetraining.examples.dialogs.showSWTMessageBox"
+                  style="push">
+            </command>
+            <command
+                  commandId="net.eclipsetraining.examples.dialogs.showJFaceMessageDialog"
+                  style="push">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="net.eclipsetraining.examples.dialogs.ShowSWTMessageBoxHandler"
+            commandId="net.eclipsetraining.examples.dialogs.showSWTMessageBox">
+      </handler>
+      <handler
+            class="net.eclipsetraining.examples.dialogs.ShowJFaceMessageDialogHandler"
+            commandId="net.eclipsetraining.examples.dialogs.showJFaceMessageDialog">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="net.eclipsetraining.examples.dialogs.showSWTMessageBox"
+            name="SWT MessageBox">
+      </command>
+      <command
+            id="net.eclipsetraining.examples.dialogs.showJFaceMessageDialog"
+            name="JFace MessageDialog">
+      </command>
+   </extension>
+
+</plugin>
