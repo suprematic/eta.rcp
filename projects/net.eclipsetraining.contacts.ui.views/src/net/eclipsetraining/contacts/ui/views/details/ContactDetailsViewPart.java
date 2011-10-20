@@ -16,7 +16,7 @@ import org.eclipse.ui.part.ViewPart;
 
 public class ContactDetailsViewPart extends ViewPart {
 
-	private final static SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd.MMM.yyyy");
+	private final static SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd.MMM.yyyy"); //$NON-NLS-1$
 
 	private ContactDetailsComposite cmp;
 
@@ -45,7 +45,7 @@ public class ContactDetailsViewPart extends ViewPart {
 	private void displayDetails(Contact contact) {
 		cmp.txtFirstName.setText(contact.getFirstName());
 		cmp.txtLastName.setText(contact.getLastName());
-		cmp.txtBirthdate.setText(contact.getBirthday() != null ? DATE_FORMAT.format(contact.getBirthday()) : "");
+		cmp.txtBirthdate.setText(contact.getBirthday() != null ? DATE_FORMAT.format(contact.getBirthday()) : ""); //$NON-NLS-1$
 
 	}
 

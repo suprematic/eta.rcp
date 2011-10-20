@@ -9,6 +9,7 @@ import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.StructuredSelection;
+import org.eclipse.osgi.util.NLS;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.handlers.HandlerUtil;
@@ -27,8 +28,8 @@ public class DeleteContactHandler extends AbstractHandler {
 			if (selected instanceof Contact) {
 				Contact contact = (Contact) selected;
 
-				if (MessageDialog.openQuestion(shell, "Delete Contact",
-						"Do you want to delete " + contact.getFirstName() + "?")) {
+				if (MessageDialog.openQuestion(shell, Messages.DeleteContactHandler_msgTitle,
+						NLS.bind(Messages.DeleteContactHandler_msgQuestion, contact.getFirstName()))) {
 
 					ContactsRepositoryFactory.getContactsRepository().removeContact(contact);
 

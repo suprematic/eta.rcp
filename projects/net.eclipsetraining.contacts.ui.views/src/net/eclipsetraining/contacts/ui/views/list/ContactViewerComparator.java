@@ -11,7 +11,7 @@ class ContactViewerComparator extends ViewerComparator {
 	public int compare(final Viewer viewer, final Object e1, final Object e2) {
 
 		if (!(e1 instanceof Contact) || !(e2 instanceof Contact)) {
-			throw new IllegalArgumentException("Can only compare Contacts");
+			throw new IllegalArgumentException("Can only compare Contacts"); //$NON-NLS-1$
 		}
 
 		final Contact contact1 = (Contact) e1;

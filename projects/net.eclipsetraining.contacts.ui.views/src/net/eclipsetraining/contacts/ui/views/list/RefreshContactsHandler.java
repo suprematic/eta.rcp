@@ -13,12 +13,12 @@ public class RefreshContactsHandler extends AbstractHandler {
 
 		try {
 			ContactListViewPart contactsView = (ContactListViewPart) PlatformUI.getWorkbench()
-					.getActiveWorkbenchWindow().getActivePage().showView("net.eclipsetraining.contacts.ui.view.list");
+					.getActiveWorkbenchWindow().getActivePage().showView("net.eclipsetraining.contacts.ui.view.list"); //$NON-NLS-1$
 
 			contactsView.refreshContacts();
 
 		} catch (PartInitException e) {
-			throw new ExecutionException("Can't find contacts view", e);
+			throw new ExecutionException("Can't find contacts view", e); //$NON-NLS-1$
 		}
 
 		return null;

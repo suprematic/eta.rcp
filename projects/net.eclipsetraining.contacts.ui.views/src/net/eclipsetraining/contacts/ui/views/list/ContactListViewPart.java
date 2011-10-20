@@ -33,11 +33,11 @@ public class ContactListViewPart extends ViewPart {
 		tbl.setLinesVisible(true);
 
 		TableColumn tcFirstName = new TableColumn(tbl, SWT.LEFT);
-		tcFirstName.setText("First Name");
+		tcFirstName.setText(Messages.ContactListViewPart_firstName);
 		tcFirstName.setWidth(100);
 
 		TableColumn tcLastName = new TableColumn(tbl, SWT.LEFT);
-		tcLastName.setText("Last Name");
+		tcLastName.setText(Messages.ContactListViewPart_lastName);
 		tcLastName.setWidth(150);
 
 		// Init TableViewer
@@ -81,7 +81,7 @@ public class ContactListViewPart extends ViewPart {
 		Menu menu = mgr.createContextMenu(contactsViewer.getControl());
 		contactsViewer.getControl().setMenu(menu);
 
-		getViewSite().registerContextMenu("net.eclipsetraining.contacts.ui.view.list", mgr, contactsViewer);
+		getViewSite().registerContextMenu("net.eclipsetraining.contacts.ui.view.list", mgr, contactsViewer); //$NON-NLS-1$
 
 	}
 

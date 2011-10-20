@@ -25,7 +25,7 @@ public class SendEmailHandler extends AbstractHandler {
 
 			if (selected instanceof Contact) {
 				Contact contact = (Contact) selected;
-				MessageDialog.openInformation(shell, "Send Email", "TODO: send email to " + contact.getFirstName());
+				MessageDialog.openInformation(shell, Messages.SendEmailHandler_msgTitle, Messages.SendEmailHandler_msgMessage + contact.getFirstName());
 			}
 		}
 

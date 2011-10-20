@@ -5,14 +5,14 @@
          point="org.eclipse.ui.views">
       <category
             id="net.eclipsetraining.contacts.ui.contacts.category"
-            name="Contacts">
+            name="%views.category.name">
       </category>
       <view
             category="net.eclipsetraining.contacts.ui.contacts.category"
             class="net.eclipsetraining.contacts.ui.views.list.ContactListViewPart"
             icon="icons/contacts_16.png"
             id="net.eclipsetraining.contacts.ui.view.list"
-            name="Contacts"
+            name="%view.list.name"
             restorable="true">
       </view>
       <view
@@ -20,7 +20,7 @@
             class="net.eclipsetraining.contacts.ui.views.details.ContactDetailsViewPart"
             icon="icons/contact_16.png"
             id="net.eclipsetraining.contacts.ui.view.details"
-            name="Contact Details"
+            name="%view.details.name"
             restorable="true">
       </view>
    </extension>
@@ -54,7 +54,7 @@
          point="org.eclipse.ui.commands">
       <command
             id="net.eclipsetraining.contacts.ui.views.command.sendEmail"
-            name="Send Email">
+            name="%command.send_email.name">
       </command>
    </extension>
    <extension

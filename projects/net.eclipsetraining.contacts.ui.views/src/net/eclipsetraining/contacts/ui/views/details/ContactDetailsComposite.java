@@ -16,15 +16,15 @@ public class ContactDetailsComposite extends Composite {
 	public ContactDetailsComposite(Composite parent, int style) {
 		super(parent, style);
 
-		new Label(this, SWT.NONE).setText("First Name");
+		new Label(this, SWT.NONE).setText(Messages.ContactDetailsComposite_firstName);
 		txtFirstName = new Text(this, SWT.BORDER);
 		txtFirstName.setEnabled(false);
 
-		new Label(this, SWT.NONE).setText("Last Name");
+		new Label(this, SWT.NONE).setText(Messages.ContactDetailsComposite_lastName);
 		txtLastName = new Text(this, SWT.BORDER);
 		txtLastName.setEnabled(false);
 
-		new Label(this, SWT.NONE).setText("Birthdate");
+		new Label(this, SWT.NONE).setText(Messages.ContactDetailsComposite_birthdate);
 		txtBirthdate = new Text(this, SWT.BORDER);
 		txtBirthdate.setEnabled(false);
 

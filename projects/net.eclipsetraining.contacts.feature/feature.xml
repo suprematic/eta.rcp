@@ -59,4 +59,12 @@
          version="0.0.0"
          unpack="false"/>
 
+   <plugin
+         id="net.eclipsetraining.contacts.ui.views.nl.de"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
 </feature>
