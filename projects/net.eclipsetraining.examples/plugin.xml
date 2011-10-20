@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=file">
+         <menu
+               id="net.eclipsetraining.examples.menu"
+               label="ETA &amp;Examples">
+         </menu>
+      </menuContribution>
+   </extension>
+
+</plugin>
