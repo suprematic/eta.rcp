@@ -3,14 +3,14 @@ package net.eclipsetraining.contacts.core.internal;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Date;
 
 import net.eclipsetraining.contacts.core.Contact;
 import net.eclipsetraining.contacts.core.IContactsRepository;
 
 public class DummyContactsRepository implements IContactsRepository {
 
-	private final Collection<Contact> contacts = Collections
-			.synchronizedCollection(new ArrayList<Contact>());
+	private final Collection<Contact> contacts = Collections.synchronizedCollection(new ArrayList<Contact>());
 
 	public DummyContactsRepository() {
 
@@ -24,6 +24,7 @@ public class DummyContactsRepository implements IContactsRepository {
 		contact.setCountry("Deutschland");
 		contact.setEmail("max.mustermann@eclipse-training.net");
 		contact.setPhone("+49 89 123999");
+		contact.setBirthday(new Date());
 		contacts.add(contact);
 
 		Contact contact2 = new Contact();
@@ -36,6 +37,7 @@ public class DummyContactsRepository implements IContactsRepository {
 		contact2.setCountry("United States of America");
 		contact2.setEmail("john.doe@eclipse-training.net");
 		contact2.setPhone("+1 646 123 4567");
+		contact2.setBirthday(new Date());
 		contacts.add(contact2);
 
 		Contact contact3 = new Contact();
@@ -48,6 +50,7 @@ public class DummyContactsRepository implements IContactsRepository {
 		contact3.setCountry("Schweiz");
 		contact3.setEmail("urs.mueller@eclipse-training.net");
 		contact3.setPhone("+41 31 1234567");
+
 		contacts.add(contact3);
 	}
 

@@ -1,95 +1,107 @@
 package net.eclipsetraining.contacts.core;
 
+import java.util.Date;
+
 public class Contact {
 
-    private String city;
+	private String city;
 
-    private String country;
+	private String country;
 
-    private String email;
+	private String email;
 
-    private String firstName;
+	private String firstName;
 
-    private String lastName;
+	private String lastName;
 
-    private String phone;
+	private String phone;
 
-    private String state;
+	private String state;
 
-    private String street;
+	private String street;
 
-    private String zip;
+	private String zip;
 
-    public String getCity() {
-        return city;
-    }
+	private Date birthday;
 
-    public String getCountry() {
-        return country;
-    }
+	public String getCity() {
+		return city;
+	}
 
-    public String getEmail() {
-        return email;
-    }
+	public String getCountry() {
+		return country;
+	}
 
-    public String getFirstName() {
-        return firstName;
-    }
+	public String getEmail() {
+		return email;
+	}
 
-    public String getLastName() {
-        return lastName;
-    }
+	public String getFirstName() {
+		return firstName;
+	}
 
-    public String getPhone() {
-        return phone;
-    }
+	public String getLastName() {
+		return lastName;
+	}
 
-    public String getState() {
-        return state;
-    }
+	public String getPhone() {
+		return phone;
+	}
 
-    public String getStreet() {
-        return street;
-    }
+	public String getState() {
+		return state;
+	}
 
-    public String getZip() {
-        return zip;
-    }
+	public String getStreet() {
+		return street;
+	}
 
-    public void setCity(final String city) {
-        this.city = city;
-    }
+	public String getZip() {
+		return zip;
+	}
 
-    public void setCountry(final String country) {
-        this.country = country;
-    }
+	public void setCity(final String city) {
+		this.city = city;
+	}
 
-    public void setEmail(final String email) {
-        this.email = email;
-    }
+	public void setCountry(final String country) {
+		this.country = country;
+	}
 
-    public void setFirstName(final String firstName) {
-        this.firstName = firstName;
-    }
+	public void setEmail(final String email) {
+		this.email = email;
+	}
 
-    public void setLastName(final String lastName) {
-        this.lastName = lastName;
-    }
+	public void setFirstName(final String firstName) {
+		this.firstName = firstName;
+	}
 
-    public void setPhone(final String phone) {
-        this.phone = phone;
-    }
+	public void setLastName(final String lastName) {
+		this.lastName = lastName;
+	}
 
-    public void setState(final String state) {
-        this.state = state;
-    }
+	public void setPhone(final String phone) {
+		this.phone = phone;
+	}
 
-    public void setStreet(final String street) {
-        this.street = street;
-    }
+	public void setState(final String state) {
+		this.state = state;
+	}
 
-    public void setZip(final String zip) {
-        this.zip = zip;
-    }
-   
+	public void setStreet(final String street) {
+		this.street = street;
+	}
+
+	public void setZip(final String zip) {
+		this.zip = zip;
+	}
+
+	public Date getBirthday() {
+		return birthday;
+	}
+
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
+	}
+
 }
