@@ -19,6 +19,8 @@ public class ApplicationActionBarAdvisor extends ActionBarAdvisor {
 	private IWorkbenchAction actionQuit;
 	private IWorkbenchAction actionAbout;
 	private IWorkbenchAction actionNew;
+	private IWorkbenchAction actionSave;
+	private IWorkbenchAction actionSaveAll;
 	private IWorkbenchAction actionPrefs;
 	private IContributionItem shortlistViews;
 	private IContributionItem shortlistPerspectives;
@@ -31,36 +33,35 @@ public class ApplicationActionBarAdvisor extends ActionBarAdvisor {
 	protected void makeActions(final IWorkbenchWindow window) {
 		actionNew = ActionFactory.NEW.create(window);
 		actionNew.setText("&New");
+		actionSave = ActionFactory.SAVE.create(window);
+		actionSaveAll = ActionFactory.SAVE_ALL.create(window);
 		actionQuit = ActionFactory.QUIT.create(window);
 		actionAbout = ActionFactory.ABOUT.create(window);
 		actionPrefs = ActionFactory.PREFERENCES.create(window);
 		shortlistViews = ContributionItemFactory.VIEWS_SHORTLIST.create(window);
-		shortlistPerspectives = ContributionItemFactory.PERSPECTIVES_SHORTLIST
-				.create(window);
+		shortlistPerspectives = ContributionItemFactory.PERSPECTIVES_SHORTLIST.create(window);
 	}
 
 	@Override
 	protected void fillMenuBar(final IMenuManager menuBar) {
-		MenuManager mgrFile = new MenuManager("&File",
-				IWorkbenchActionConstants.M_FILE);
+		MenuManager mgrFile = new MenuManager("&File", IWorkbenchActionConstants.M_FILE);
 		mgrFile.add(actionNew);
+		mgrFile.add(actionSave);
+		mgrFile.add(actionSaveAll);
 		mgrFile.add(new Separator());
 		mgrFile.add(actionQuit);
 
-		MenuManager mgrWindow = new MenuManager("&Window",
-				IWorkbenchActionConstants.M_FILE);
+		MenuManager mgrWindow = new MenuManager("&Window", IWorkbenchActionConstants.M_FILE);
 		MenuManager mgrWindowViews = new MenuManager("Show &View");
 		mgrWindowViews.add(shortlistViews);
-		MenuManager mgrWindowPerspectives = new MenuManager(
-				"&Open Perspectives");
+		MenuManager mgrWindowPerspectives = new MenuManager("&Open Perspectives");
 		mgrWindowPerspectives.add(shortlistPerspectives);
 		mgrWindow.add(mgrWindowPerspectives);
 		mgrWindow.add(mgrWindowViews);
 		mgrWindow.add(new Separator());
 		mgrWindow.add(actionPrefs);
 
-		MenuManager mgrHelp = new MenuManager("&Help",
-				IWorkbenchActionConstants.M_FILE);
+		MenuManager mgrHelp = new MenuManager("&Help", IWorkbenchActionConstants.M_FILE);
 		mgrHelp.add(actionAbout);
 
 		menuBar.add(mgrFile);
@@ -72,6 +73,8 @@ public class ApplicationActionBarAdvisor extends ActionBarAdvisor {
 	protected void fillCoolBar(ICoolBarManager coolBar) {
 		ToolBarManager tbFile = new ToolBarManager(coolBar.getStyle());
 		tbFile.add(actionNew);
+		tbFile.add(actionSave);
+		tbFile.add(actionSaveAll);
 
 		coolBar.add(tbFile);
 

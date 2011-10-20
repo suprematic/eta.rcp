@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="net.eclipsetraining.contacts.ui.detaileditor.internal.DetailEditor"
+            default="false"
+            icon="icons/contact_16.png"
+            id="net.eclipsetraining.contacts.ui.detaileditor.editors.detail"
+            name="Contact Details Editor">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="net.eclipsetraining.contacts.ui.commands.editcontact"
+            name="Edit Contact">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="net.eclipsetraining.contacts.ui.detaileditor.internal.EditContactHandler"
+            commandId="net.eclipsetraining.contacts.ui.commands.editcontact">
+         <activeWhen>
+            <count
+                  value="+">
+            </count>
+         </activeWhen>
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="popup:net.eclipsetraining.contacts.ui.view.list">
+         <command
+               commandId="net.eclipsetraining.contacts.ui.commands.editcontact"
+               style="push">
+         </command>
+      </menuContribution>
+   </extension>
+
+</plugin>
