@@ -9,7 +9,7 @@
       </category>
       <view
             category="net.eclipsetraining.contacts.ui.contacts.category"
-            class="net.eclipsetraining.contacts.ui.views.ContactListViewPart"
+            class="net.eclipsetraining.contacts.ui.views.list.ContactListViewPart"
             icon="icons/contacts_16.png"
             id="net.eclipsetraining.contacts.ui.view.list"
             name="Contacts"
@@ -17,7 +17,7 @@
       </view>
       <view
             category="net.eclipsetraining.contacts.ui.contacts.category"
-            class="net.eclipsetraining.contacts.ui.views.ContactDetailsViewPart"
+            class="net.eclipsetraining.contacts.ui.views.details.ContactDetailsViewPart"
             icon="icons/contact_16.png"
             id="net.eclipsetraining.contacts.ui.view.details"
             name="Contact Details"
