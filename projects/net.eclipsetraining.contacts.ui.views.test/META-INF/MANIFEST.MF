@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Contacts Manager Views Test
+Bundle-SymbolicName: net.eclipsetraining.contacts.ui.views.test
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Eclipse Training Alliance
+Fragment-Host: net.eclipsetraining.contacts.ui.views
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.junit4
