@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="net.eclipsetraining.contacts.ui.contacts.category"
+            name="Contacts">
+      </category>
+      <view
+            category="net.eclipsetraining.contacts.ui.contacts.category"
+            class="net.eclipsetraining.contacts.ui.views.ContactListViewPart"
+            icon="icons/contacts_16.png"
+            id="net.eclipsetraining.contacts.ui.view.list"
+            name="Contacts"
+            restorable="true">
+      </view>
+      <view
+            category="net.eclipsetraining.contacts.ui.contacts.category"
+            class="net.eclipsetraining.contacts.ui.views.ContactDetailsViewPart"
+            icon="icons/contact_16.png"
+            id="net.eclipsetraining.contacts.ui.view.details"
+            name="Contact Details"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="net.eclipsetraining.contacts.ui.application.perspective">
+         <viewShortcut
+               id="net.eclipsetraining.contacts.ui.view.list">
+         </viewShortcut>
+         <viewShortcut
+               id="net.eclipsetraining.contacts.ui.view.details">
+         </viewShortcut>
+         <view
+               id="net.eclipsetraining.contacts.ui.view.list"
+               minimized="false"
+               ratio="0.33"
+               relationship="left"
+               relative="org.eclipse.ui.editorss">
+         </view>
+         <view
+               id="net.eclipsetraining.contacts.ui.view.details"
+               minimized="false"
+               ratio="0.66"
+               relationship="bottom"
+               relative="org.eclipse.ui.editorss">
+         </view>
+      </perspectiveExtension>
+   </extension>
+
+</plugin>

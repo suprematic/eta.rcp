@@ -18,13 +18,6 @@
    </license>
 
    <plugin
-         id="net.eclipsetraining.contacts.core"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="net.eclipsetraining.contacts.ui.application"
          download-size="0"
          install-size="0"
@@ -33,6 +26,20 @@
 
    <plugin
          id="net.eclipsetraining.contacts.ui.product"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.eclipsetraining.contacts.ui.views"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.eclipsetraining.contacts.core"
          download-size="0"
          install-size="0"
          version="0.0.0"

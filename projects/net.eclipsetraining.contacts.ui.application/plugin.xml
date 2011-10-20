@@ -14,7 +14,7 @@
               class="net.eclipsetraining.contacts.ui.application.internal.application.Perspective"
               icon="icons/contact_16.png"
               id="net.eclipsetraining.contacts.ui.application.perspective"
-              name="Default Perspective">
+              name="Contact Manager">
         </perspective>
     </extension>
 </plugin>

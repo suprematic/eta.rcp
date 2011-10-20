@@ -17,7 +17,7 @@
          </property>
          <property
                name="aboutText"
-               value="Some text about Contacts Manager....&#x0D;&#x0A;&#x0D;&#x0A;(c) 2005-2011 Eclipse Training Alliance&#x0D;&#x0A;http://eclipse-training.net">
+               value="Some text about Contacts Manager....&#x0A;&#x0A;(c) 2005-2011 Eclipse Training Alliance&#x0A;http://eclipse-training.net">
          </property>
       </product>
    </extension>
