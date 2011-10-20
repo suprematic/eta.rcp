@@ -65,6 +65,8 @@ public class ContactListViewPart extends ViewPart {
 			}
 		});
 
+		getSite().setSelectionProvider(contactsViewer);
+
 		// Finally set input
 		refreshContacts();
 
