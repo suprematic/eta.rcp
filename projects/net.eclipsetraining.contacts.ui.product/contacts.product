@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="Contacts the RCP Way" uid="contacts" id="net.eclipsetraining.contacts.ui.product.product" application="net.eclipsetraining.contacts.ui.application.application" useFeatures="true" includeLaunchers="true">
+
+   <aboutInfo>
+      <image path="/net.eclipsetraining.contacts.ui.product/icons/about.png"/>
+      <text>
+         Some text about Contacts Manager....
+
+(c) 2005-2011 Eclipse Training Alliance
+http://eclipse-training.net
+      </text>
+   </aboutInfo>
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts</vmArgsMac>
+   </launcherArgs>
+
+   <windowImages/>
+
+   <splash
+      location="net.eclipsetraining.contacts.ui.product" />
+   <launcher name="contacts">
+      <macosx icon="/net.eclipsetraining.contacts.ui.product/icons/contact.icns"/>
+      <solaris/>
+      <win useIco="false">
+         <bmp/>
+      </win>
+   </launcher>
+
+
+   <vm>
+   </vm>
+
+   <license>
+        <url>http://eclipse-training.net</url>
+        <text>
+   Some text about licences may follow here...
+         </text>
+   </license>
+
+   <plugins>
+   </plugins>
+
+   <features>
+      <feature id="net.eclipsetraining.contacts.feature" version="1.0.0.qualifier"/>
+      <feature id="org.eclipse.rcp" version="3.5.1.R35x_v20090811-9SA0FxVFqE70OL1ARMrfcO6e7BA6"/>
+   </features>
+
+
+</product>

@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Contacts Manager
+Bundle-SymbolicName: net.eclipsetraining.contacts.ui.product;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Vendor: Eclipse Training Alliance
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
