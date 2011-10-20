@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: New contact wizard
+Bundle-SymbolicName: net.eclipsetraining.contacts.ui.newwizard;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Vendor: Eclipse Training Alliance
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Import-Package: net.eclipsetraining.contacts.core;version="1.0.0"
